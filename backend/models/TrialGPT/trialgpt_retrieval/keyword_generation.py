@@ -1,4 +1,4 @@
-__author__ = "qiao"
+__author__ = "qiao, revised by Kathy"
 
 """
 generate the search keywords for each patient
@@ -6,7 +6,7 @@ generate the search keywords for each patient
 
 import json
 import os
-from openai import AzureOpenAI
+# from openai import AzureOpenAI
 import openai
 import sys
 
