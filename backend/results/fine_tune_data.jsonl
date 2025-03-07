@@ -1,0 +1,17 @@
+import json
+
+# Load your labeled data
+with open("backend/results/fine_tune_data.json", "r") as file:
+    data = json.load(file)
+
+# Convert to .jsonl format
+with open("backend/results/fine_tune_data.jsonl", "w") as outfile:
+    for entry in data:
+        json.dump({
+            "messages": [
+                {"role": "system", "content": "Classify this clinical trial note."},
+                {"role": "user", "content": entry["text"]},
+                {"role": "assistant", "content": entry["label"]}
+            ]
+        }, outfile)
+        outfile.write("\n")
