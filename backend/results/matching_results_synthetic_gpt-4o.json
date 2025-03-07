@@ -1,0 +1,106 @@
+{
+    "synthetic-001": {
+        "0": {
+            "NCT12345678": {
+                "inclusion": {
+                    "0": [
+                        "The patient is a 50-year-old male with type 2 diabetes, which fits the age and disease criteria.",
+                        [
+                            0
+                        ],
+                        "included"
+                    ],
+                    "1": [
+                        "The patient's most recent HbA1c was 7.8%, which falls within the required range of 7.0-9.5%.",
+                        [
+                            4
+                        ],
+                        "included"
+                    ],
+                    "2": [
+                        "The patient is currently taking metformin, which meets the criterion of being on metformin therapy.",
+                        [
+                            3
+                        ],
+                        "included"
+                    ]
+                },
+                "exclusion": {
+                    "0": [
+                        "The criterion is not applicable because the patient has type 2 diabetes, not type 1 diabetes. There is no direct evidence of significant cardiovascular disease, and the patient explicitly reports no history of cardiovascular disease. There is no mention of severe hypoglycemia, and it is unlikely that such a medically important fact would be omitted if it were true.",
+                        [
+                            0,
+                            2
+                        ],
+                        "not excluded"
+                    ]
+                }
+            },
+            "NCT23456789": {
+                "inclusion": {
+                    "0": [
+                        "The patient is 50 years old, which falls within the age range of 40-70. He has type 2 diabetes and reports mild neuropathy in his feet, but the criterion specifies moderate to severe foot pain, which is not mentioned in the patient note. It is unlikely that a good patient note would miss mentioning moderate to severe pain if it were present.",
+                        [
+                            0,
+                            2
+                        ],
+                        "not included"
+                    ]
+                },
+                "exclusion": {
+                    "0": [
+                        "The criterion checks for a history of epilepsy, renal impairment, or recent use of gabapentin. The patient note does not mention epilepsy or renal impairment, and it is reasonable to assume these are not present as they are significant medical conditions. There is no mention of gabapentin use, and it is unlikely that such a medication would be omitted if it were relevant.",
+                        [],
+                        "not excluded"
+                    ]
+                }
+            }
+        },
+        "1": {
+            "NCT34567890": {
+                "inclusion": {
+                    "0": [
+                        "The patient is a 50-year-old male, which falls within the age range of 30-65. He has type 2 diabetes and a history of obesity, which suggests a BMI >30. He is not on insulin therapy, as he is taking metformin. Therefore, he meets all parts of this criterion.",
+                        [
+                            0,
+                            1,
+                            3
+                        ],
+                        "included"
+                    ]
+                },
+                "exclusion": {
+                    "0": [
+                        "The criterion is about severe kidney disease, recent cardiovascular events, or pregnancy. The patient note does not mention severe kidney disease or pregnancy. It explicitly states no history of cardiovascular disease, which implies no recent cardiovascular events.",
+                        [
+                            2
+                        ],
+                        "not excluded"
+                    ]
+                }
+            }
+        },
+        "2": {
+            "NCT45678901": {
+                "inclusion": {
+                    "0": [
+                        "The patient is a 50-year-old male with type 2 diabetes and hypertension, currently taking lisinopril, an antihypertensive medication. This matches the inclusion criteria of having both hypertension and type 2 diabetes, being within the age range of 35-75, and taking antihypertensive medication.",
+                        [
+                            0,
+                            1,
+                            3
+                        ],
+                        "included"
+                    ]
+                },
+                "exclusion": {
+                    "0": [
+                        "The criterion is about a history of angioedema, severe kidney impairment, or pregnancy. The patient is a 50-year-old male, so pregnancy is not applicable. There is no mention of angioedema or severe kidney impairment in the patient note. If the patient had a history of angioedema or severe kidney impairment, it is unlikely that such important medical history would be omitted from the note.",
+                        [],
+                        "not excluded"
+                    ]
+                }
+            }
+        }
+    }
+}

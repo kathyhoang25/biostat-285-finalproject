@@ -1,0 +1,28 @@
+{
+    "synthetic-001": {
+        "NCT12345678": {
+            "relevance_explanation": "The patient is a 50-year-old male with type 2 diabetes, which is the target condition for the clinical trial. The trial is focused on evaluating the efficacy of metformin and insulin combination therapy in managing blood glucose levels in type 2 diabetes patients. The patient is currently on metformin therapy and has an HbA1c level within the specified range (7.8%), making him relevant to the trial.",
+            "relevance_score_R": 95.0,
+            "eligibility_explanation": "The patient meets the inclusion criteria as he is an adult aged 18-75 with type 2 diabetes, an HbA1c level between 7.0-9.5%, and is currently on metformin therapy. He is not excluded by the exclusion criteria as he does not have type 1 diabetes, significant cardiovascular disease, or a history of severe hypoglycemia. Therefore, the patient is eligible for the trial.",
+            "eligibility_score_E": 95.0
+        },
+        "NCT23456789": {
+            "relevance_explanation": "The patient is a 50-year-old male with type 2 diabetes and mild neuropathy in his feet, which aligns with the trial's focus on diabetic neuropathy. However, the trial specifically targets patients with moderate to severe foot pain, which is not mentioned in the patient note. The patient falls within the age range and has diabetic neuropathy, making him somewhat relevant to the trial.",
+            "relevance_score_R": 70.0,
+            "eligibility_explanation": "The patient is not included in the trial because he does not meet the inclusion criterion of experiencing moderate to severe foot pain. However, he is not excluded by the exclusion criteria, as there is no history of epilepsy, renal impairment, or recent use of gabapentin mentioned. Therefore, the patient is not eligible for the trial.",
+            "eligibility_score_E": -70.0
+        },
+        "NCT45678901": {
+            "relevance_explanation": "The clinical trial is focused on patients with type 2 diabetes and hypertension who are taking lisinopril, which matches the patient's conditions and current medication. The patient is a 50-year-old male with type 2 diabetes and hypertension, currently taking lisinopril, making him highly relevant to the trial.",
+            "relevance_score_R": 95.0,
+            "eligibility_explanation": "The patient meets the inclusion criteria as he has both hypertension and type 2 diabetes, is within the age range of 35-75, and is taking an antihypertensive medication (lisinopril). He is not excluded by the exclusion criteria as there is no history of angioedema, severe kidney impairment, or pregnancy. Therefore, the patient is eligible for the trial.",
+            "eligibility_score_E": 95.0
+        },
+        "NCT34567890": {
+            "relevance_explanation": "The clinical trial is focused on patients with type 2 diabetes and obesity, which directly matches the patient's conditions. The patient is a 50-year-old male with type 2 diabetes and a history of obesity, making him highly relevant to the trial's target population. Additionally, the trial's focus on dietary management aligns with the patient's current treatment regimen, which includes metformin for diabetes management.",
+            "relevance_score_R": 95.0,
+            "eligibility_explanation": "The patient meets the inclusion criteria as he is within the age range of 30-65, has type 2 diabetes, a history of obesity (suggesting a BMI >30), and is not on insulin therapy. He is also not excluded by the exclusion criteria, as he has no severe kidney disease, recent cardiovascular events, or pregnancy. Therefore, the patient is eligible for the trial.",
+            "eligibility_score_E": 95.0
+        }
+    }
+}
