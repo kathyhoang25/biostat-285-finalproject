@@ -37,6 +37,33 @@ Our project is inspired by recent advancements in NLP for clinical trials:
 - **Models**: GPT-4o and GPT-4o-mini
 - **Data Source**: [ClinicalTrials.gov](https://clinicaltrials.gov/)
 
+### Datasets Used
+While we use a synthetic dataset, the original TrialGPT framework uses publicly available clinical trial data:
+- ClinicalTrials.gov – Structured clinical trial eligibility criteria.
+- SIGIR 2016 Corpus – Dataset Link.
+- TREC Clinical Trials 2021 Corpus – Dataset Link.
+- TREC Clinical Trials 2022 Corpus – Dataset Link.
+**To download trial datasets, run:**
+wget -O dataset/trial_info.json https://ftp.ncbi.nlm.nih.gov/pub/lu/TrialGPT/trial_info.json  
+wget -O dataset/trec_2021/corpus.json https://ftp.ncbi.nlm.nih.gov/pub/lu/TrialGPT/trec_2021.json  
+wget -O dataset/trec_2022/corpus.json https://ftp.ncbi.nlm.nih.gov/pub/lu/TrialGPT/trec_2022.json
+
+
+### Installation and Setup
+**1. Clone the Repository**
+git clone git@github.com:<your-organization>/TrialGPT.git  
+cd TrialGPT  
+
+**2. Set Up Virtual Environment**
+python -m venv env  
+source env/bin/activate  # Mac/Linux  
+env\Scripts\activate     # Windows (CMD)  
+
+**3. Install Dependencies**
+pip install -r requirements.txt 
+
+
+
 ## Example Use Case
 - **Input Example**: *"65-yead-old female Asian with Type 2 Diabetes"*
 - **System Output**: Returns a **ranked** list of relevant trials, displaying key details such as **conditions, interventions, locations, and eligibility criteria.** 
