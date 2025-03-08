@@ -56,7 +56,7 @@ To manually download the trial datasets, run the following commands:
 wget -O dataset/trial_info.json https://ftp.ncbi.nlm.nih.gov/pub/lu/TrialGPT/trial_info.json
 wget -O dataset/trec_2021/corpus.json https://ftp.ncbi.nlm.nih.gov/pub/lu/TrialGPT/trec_2021.json
 wget -O dataset/trec_2022/corpus.json https://ftp.ncbi.nlm.nih.gov/pub/lu/TrialGPT/trec_2022.json
-
+```
 
 
 
