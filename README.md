@@ -31,36 +31,32 @@ Our project is inspired by recent advancements in NLP for clinical trials:
 3. **Ranking Fusion:** Scores combined for final ranking
 4. **Output:** A ranked list of clinical trials with structured details
 
-### Technologies Used
-- **Frontend**: React
-- **Backend**: Python (FastAPI)
-- **Models**: GPT-4o and GPT-4o-mini
-- **Data Source**: [ClinicalTrials.gov](https://clinicaltrials.gov/)
+## **Technologies Used**
+| **Component**   | **Technology**  |
+|----------------|----------------|
+| **Frontend**   | React |
+| **Backend**    | Python (FastAPI) |
+| **Models**     | GPT-4o and GPT-4o-mini |
+| **Data Source** | [ClinicalTrials.gov](https://clinicaltrials.gov/) |
 
-### Datasets Used
-While we use a synthetic dataset, the original TrialGPT framework uses publicly available clinical trial data:
-- ClinicalTrials.gov – Structured clinical trial eligibility criteria.
-- SIGIR 2016 Corpus – Dataset Link.
-- TREC Clinical Trials 2021 Corpus – Dataset Link.
-- TREC Clinical Trials 2022 Corpus – Dataset Link.
-**To download trial datasets, run:**
-wget -O dataset/trial_info.json https://ftp.ncbi.nlm.nih.gov/pub/lu/TrialGPT/trial_info.json  
-wget -O dataset/trec_2021/corpus.json https://ftp.ncbi.nlm.nih.gov/pub/lu/TrialGPT/trec_2021.json  
+---
+
+## **Datasets Used**
+While we use a **synthetic dataset**, the original **TrialGPT framework** utilizes **publicly available clinical trial data**:
+
+- **[ClinicalTrials.gov](https://clinicaltrials.gov/)** – Structured clinical trial eligibility criteria.
+- **[SIGIR 2016 Corpus](https://data.csiro.au/collection/csiro:17152)** – A collection of trial-related documents.
+- **[TREC Clinical Trials 2021 Corpus](https://www.trec-cds.org/2021.html)** – Benchmark dataset for trial retrieval research.
+- **[TREC Clinical Trials 2022 Corpus](https://www.trec-cds.org/2022.html)** – An updated dataset for clinical trial search and ranking.
+
+### **Downloading the Data**
+To manually download the trial datasets, run the following commands:
+
+```bash
+wget -O dataset/trial_info.json https://ftp.ncbi.nlm.nih.gov/pub/lu/TrialGPT/trial_info.json
+wget -O dataset/trec_2021/corpus.json https://ftp.ncbi.nlm.nih.gov/pub/lu/TrialGPT/trec_2021.json
 wget -O dataset/trec_2022/corpus.json https://ftp.ncbi.nlm.nih.gov/pub/lu/TrialGPT/trec_2022.json
 
-
-### Installation and Setup
-**1. Clone the Repository**
-git clone git@github.com:<your-organization>/TrialGPT.git  
-cd TrialGPT  
-
-**2. Set Up Virtual Environment**
-python -m venv env  
-source env/bin/activate  # Mac/Linux  
-env\Scripts\activate     # Windows (CMD)  
-
-**3. Install Dependencies**
-pip install -r requirements.txt 
 
 
 
