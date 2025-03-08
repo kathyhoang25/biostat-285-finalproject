@@ -39,7 +39,6 @@ Our project is inspired by recent advancements in NLP for clinical trials:
 | **Models**     | GPT-4o and GPT-4o-mini |
 | **Data Source** | [ClinicalTrials.gov](https://clinicaltrials.gov/) |
 
----
 
 ## **Datasets Used**
 While we use a **synthetic dataset**, the original **TrialGPT framework** utilizes **publicly available clinical trial data**:
