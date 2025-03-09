@@ -10,22 +10,65 @@ function App() {
   const [trials, setTrials] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  // const matchTrials = async () => {
+  //   setLoading(true);
+  //   try {
+  //     const response = await axios.post("http://127.0.0.1:8000/match_trials/", {
+  //       age: age,
+  //       gender: gender,
+  //       race: race,
+  //       condition: condition,
+  //     });
+  //     setTrials(response.data.matched_trials);
+  //   } catch (error) {
+  //     console.error("Error fetching trials:", error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
+  // const matchTrials = async () => {
+  //   setLoading(true);
+  //   try {
+  //     // Step 1: Get Matched Trials
+  //     const response = await axios.post("http://127.0.0.1:8000/match_trials/", {
+  //       age: age,
+  //       gender: gender,
+  //       race: race,
+  //       condition: condition,
+  //     });
+  
+  //     setTrials(response.data.matched_trials);
+  
+  //     // Step 2: Get Ranked Trials After Matching
+  //     const patientId = response.data.patient_id || "synthetic-001";  // Replace with actual patient ID
+  //     const rankedResponse = await axios.get(`http://127.0.0.1:8000/ranked_trials/${patientId}`);
+  
+  //     if (rankedResponse.data.ranked_trials) {
+  //       setTrials(rankedResponse.data.ranked_trials);  // Update trials with ranked ones
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching trials:", error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };  
+
+  // attempt 3
+  const [patientPrompt, setPatientPrompt] = useState("");
+  // const [trials, setTrials] = useState([]);
+
   const matchTrials = async () => {
-    setLoading(true);
     try {
       const response = await axios.post("http://127.0.0.1:8000/match_trials/", {
-        age: age,
-        gender: gender,
-        race: race,
-        condition: condition,
+        patient_prompt: patientPrompt,
       });
       setTrials(response.data.matched_trials);
     } catch (error) {
       console.error("Error fetching trials:", error);
-    } finally {
-      setLoading(false);
     }
   };
+  
 
   return (
     <div style={styles.container}>
@@ -36,7 +79,7 @@ function App() {
           <div style={styles.departmentText}>Department of Biostatistics</div>
         </div>
         <div style={styles.navbar}>
-          <a href="https://github.com/your-repo-link" target="_blank" rel="noopener noreferrer" style={styles.navLink}>
+          <a href="https://github.com/kathyhoang25/biostat-285-finalproject" target="_blank" rel="noopener noreferrer" style={styles.navLink}>
             <FaGithub size={20} /> GitHub
           </a>
           <a href="/about" style={styles.navLink}>
@@ -116,7 +159,7 @@ function App() {
         </p>
       </div>
 
-      {/* Results Section */}
+      {/* Results Section
       <h2 style={styles.resultsTitle}>Matched Clinical Trials</h2>
 
       <div style={styles.resultsContainer}>
@@ -128,6 +171,25 @@ function App() {
               <p><strong>Location:</strong> {trial.location}</p>
               <p><strong>Status:</strong> {trial.status}</p>
               <p><strong>Match Score:</strong> {trial.match_score}</p>
+            </div>
+          ))
+        ) : (
+          <p style={styles.noResults}>No trials matched yet.</p>
+        )}
+      </div> */}
+      {/* Results Section */}
+      <h2 style={styles.resultsTitle}>Ranked Clinical Trials</h2>
+
+      <div style={styles.resultsContainer}>
+        {trials.length > 0 ? (
+          trials.map((trial, index) => (
+            <div key={index} style={styles.trialCard}>
+              <h3 style={styles.trialTitle}>{trial.title || `Trial ${index + 1}`}</h3>
+              <p><strong>ID:</strong> {trial.trial_id || "N/A"}</p>
+              <p><strong>Relevance Score:</strong> {trial.relevance_score_R ? trial.relevance_score_R.toFixed(2) : "N/A"}</p>
+              <p><strong>Eligibility Score:</strong> {trial.eligibility_score_E ? trial.eligibility_score_E.toFixed(2) : "N/A"}</p>
+              <p><strong>Matching Score:</strong> {trial.matching_score_M ? trial.matching_score_M.toFixed(2) : "N/A"}</p>
+              <p><strong>Total Score:</strong> {((trial.relevance_score_R + trial.eligibility_score_E)/100 + trial.matching_score_M).toFixed(2)}</p>
             </div>
           ))
         ) : (
