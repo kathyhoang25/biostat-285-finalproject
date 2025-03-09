@@ -60,7 +60,7 @@ wget -O dataset/trec_2022/corpus.json https://ftp.ncbi.nlm.nih.gov/pub/lu/TrialG
 
 
 ## Example Use Case
-- **Input Example**: *"65-yead-old female Asian with Type 2 Diabetes"*
+- **Input Example**: *"65-year-old female Asian with Type 2 Diabetes"*
 - **System Output**: Returns a **ranked** list of relevant trials, displaying key details such as **conditions, interventions, locations, and eligibility criteria.** 
 
 ## Challenges & Limitations
